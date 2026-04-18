@@ -3,6 +3,7 @@ const nav = document.querySelector("[data-nav]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const revealItems = document.querySelectorAll(".reveal");
 const contactForm = document.querySelector("[data-contact-form]");
+const isLegalPage = /\/(privacy-policy|terms-of-use|terms)\.html$/.test(window.location.pathname);
 const VERDON_INTRO_STORAGE_KEY = "verdonIntroSeen";
 const VERDON_INTRO_DURATION = 3400;
 const VERDON_INTRO_FADE_DELAY = 180;
@@ -75,7 +76,9 @@ if (menuToggle && nav) {
   });
 }
 
-if ("IntersectionObserver" in window && revealItems.length) {
+if (isLegalPage && revealItems.length) {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+} else if ("IntersectionObserver" in window && revealItems.length) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {

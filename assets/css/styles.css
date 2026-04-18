@@ -2313,3 +2313,462 @@ p {
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .services-page .services-list {
+    gap: 1.5rem;
+  }
+
+  .services-page .service-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    grid-template-columns: 1fr !important;
+  }
+
+  .services-page .service-text,
+  .services-page .service-benefits {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .services-page .service-text {
+    min-width: 0;
+    padding-right: 0;
+  }
+
+  .services-page .service-text h2 {
+    font-size: 2rem;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  .services-page .service-text p,
+  .services-page .service-text li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .services-page .check-list {
+    padding-left: 1.1rem;
+    margin: 1rem 0 1.25rem;
+  }
+
+  .services-page .check-list li {
+    margin-bottom: 0.75rem;
+  }
+
+  .services-page .service-benefits {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    align-self: stretch;
+    justify-self: auto;
+    margin-top: 0.5rem;
+    padding: 1.25rem;
+    border-radius: 24px;
+    min-height: 0;
+  }
+
+  .services-page .service-benefits h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .services-page .service-benefits p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .services-page .service-detail .button.button-primary {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page .about-hero-grid,
+  .about-page .split-section,
+  .about-page .cta-band-inner,
+  .about-page .values-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+
+  .about-page .about-intro,
+  .about-page .split-copy,
+  .about-page .about-philosophy-copy,
+  .about-page .about-local-copy,
+  .about-page .about-cta-copy,
+  .about-page .about-visual,
+  .about-page .split-panel,
+  .about-page .cta-actions {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .about-page .about-intro h1,
+  .about-page .split-copy h2,
+  .about-page .section-heading h2,
+  .about-page .about-local-copy h2,
+  .about-page .about-cta-copy h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  .about-page .about-intro p,
+  .about-page .split-copy p,
+  .about-page .about-local-copy p,
+  .about-page .about-cta-copy p,
+  .about-page .section-heading p,
+  .about-page .value-card p,
+  .about-page .stat-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .about-page .about-visual img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 28px;
+  }
+
+  .about-page .split-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    position: static !important;
+  }
+
+  .about-page .stat-card,
+  .about-page .value-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.25rem;
+    border-radius: 24px;
+  }
+
+  .about-page .stat-card strong,
+  .about-page .value-card h3 {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-page .cta-actions {
+    display: flex;
+    width: 100%;
+  }
+
+  .about-page .button.button-primary {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section .hero-grid,
+  .trust-strip-section .trust-strip,
+  .section-tight .benefits-grid,
+  .section-soft .services-preview-grid,
+  .philosophy-section .split-section,
+  .project-grid,
+  .testimonials-grid,
+  .cta-band-inner {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+
+  .hero-copy,
+  .hero-visual,
+  .philosophy-section .split-copy,
+  .philosophy-section .split-panel,
+  .project-card,
+  .trust-stat,
+  .benefit-card,
+  .service-preview,
+  .testimonial-card,
+  .video-cta-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-title,
+  .trust-strip-intro h2,
+  .section-heading h2,
+  .philosophy-section .split-copy h2,
+  .video-cta-content h2 {
+    word-break: normal;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  .hero-section .hero-grid {
+    min-height: auto;
+    padding: 1.25rem;
+  }
+
+  .hero-title {
+    max-width: 100%;
+    font-size: 2.2rem;
+    line-height: 1.05;
+  }
+
+  .hero-title br,
+  .trust-strip-intro h2 br {
+    display: none;
+  }
+
+  .trust-strip-intro h2,
+  .section-heading h2,
+  .philosophy-section .split-copy h2,
+  .video-cta-content h2 {
+    font-size: 1.9rem;
+    line-height: 1.1;
+  }
+
+  .hero-copy .lead,
+  .hero-copy p,
+  .section-heading p,
+  .philosophy-section .split-copy p,
+  .benefit-card p,
+  .service-preview p,
+  .project-copy p,
+  .testimonial-card p,
+  .video-cta-content p,
+  .trust-stat span,
+  .hero-points li {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .button,
+  .video-cta-button,
+  .hero-section .button.button-primary,
+  .hero-section .button.button-secondary,
+  .video-cta-section .button.button-primary {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-points {
+    max-width: 100%;
+    gap: 0.75rem;
+    padding-left: 0;
+  }
+
+  .hero-points li {
+    padding-left: 1.55rem;
+  }
+
+  .hero-trustbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    max-width: 100%;
+  }
+
+  .hero-card-main img,
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero-card-floating {
+    position: static !important;
+    margin-top: 0.75rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .trust-strip-intro,
+  .trust-stat {
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+  }
+
+  .split-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    position: static !important;
+  }
+
+  .stat-card,
+  .benefit-card,
+  .service-preview,
+  .testimonial-card,
+  .trust-stat {
+    padding: 1.25rem;
+    border-radius: 24px;
+  }
+
+  .project-copy {
+    padding: 1.25rem;
+  }
+
+  .video-cta-section {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
+  .video-cta-content {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-bottom: 3rem;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+    align-items: start;
+    min-height: auto;
+    padding: 1.35rem 1.25rem 2rem;
+    overflow: visible;
+    background:
+      radial-gradient(circle at 14% 18%, rgba(143, 176, 151, 0.16), transparent 24%),
+      linear-gradient(180deg, rgba(27, 51, 38, 0.97) 0%, rgba(35, 67, 48, 0.95) 100%);
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-card-floating {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    margin-top: 0.75rem;
+    width: 100%;
+  }
+
+  .hero-points {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .hero-points li {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+  }
+
+  .hero-trustbar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .trust-strip-section {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  main,
+  .section,
+  .container,
+  .legal-page,
+  .legal-copy,
+  .privacy-policy,
+  .page-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .legal-page,
+  .legal-copy,
+  .privacy-policy,
+  .page-content,
+  .section,
+  main > section {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    transform: none;
+  }
+
+  .reveal,
+  .reveal-delay,
+  .reveal.is-visible,
+  .reveal-delay.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  main {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .legal-page {
+    padding: 3.5rem 0 2rem;
+  }
+
+  .legal-copy {
+    padding-inline: 0.1rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+}
