@@ -98,6 +98,8 @@ if (isLegalPage && revealItems.length) {
 
 if (contactForm) {
   const status = contactForm.querySelector("[data-form-status]");
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const CONTACT_FORM_ENDPOINT = "https://api.web3forms.com/submit";
   const validators = {
     name: (value) => value.trim().length >= 3 || "Συμπληρώστε το ονοματεπώνυμό σας.",
     phone: (value) =>
@@ -132,7 +134,7 @@ if (contactForm) {
     });
   });
 
-  contactForm.addEventListener("submit", (event) => {
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const fields = [...contactForm.querySelectorAll("input, select, textarea")];
     const isValid = fields.every(validateField);
@@ -142,9 +144,40 @@ if (contactForm) {
       return;
     }
 
-    status.textContent = "Το αίτημά σας καταχωρήθηκε. Θα επικοινωνήσουμε μαζί σας το συντομότερο δυνατό.";
-    contactForm.reset();
-    fields.forEach((field) => setFieldState(field, ""));
+    if (submitButton?.disabled) return;
+
+    if (submitButton) submitButton.disabled = true;
+    status.textContent = "Γίνεται αποστολή του αιτήματός σας…";
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(() => controller.abort(), 15000);
+
+    try {
+      const response = await fetch(CONTACT_FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm).entries())),
+        signal: controller.signal,
+      });
+      const result = await response.json();
+
+      if (!response.ok || result?.success !== true) {
+        throw new Error("Contact form submission was rejected");
+      }
+
+      status.textContent = "Το μήνυμά σας στάλθηκε επιτυχώς. Θα επικοινωνήσουμε μαζί σας σύντομα.";
+      contactForm.reset();
+      fields.forEach((field) => setFieldState(field, ""));
+    } catch (error) {
+      console.error("Contact form submission failed");
+      status.textContent = "Η αποστολή δεν ολοκληρώθηκε. Παρακαλώ δοκιμάστε ξανά σε λίγο.";
+    } finally {
+      window.clearTimeout(timeoutId);
+      if (submitButton) submitButton.disabled = false;
+    }
   });
 }
 
